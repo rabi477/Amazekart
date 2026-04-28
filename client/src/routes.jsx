@@ -1,0 +1,44 @@
+import Login from "./Login";
+import Signup from "./Signup";
+import Routing from "./Routing";
+import Products from "./Products";
+import Parent,{Child1,Child2,Child3} from "./Parent";
+
+const routes =[
+    {
+        path:'',
+        element:<Products/>
+    },
+    {
+        path:'/login',
+        element:<Login/>
+    },
+    {
+        path:'/signup',
+        element:<Signup/>
+    },
+    {
+        path:'/routing',
+        element:<Routing/>
+    },
+    {
+        path:'/parent',
+        element:<Parent/>,
+        children:[
+            {
+                path:'child1',
+                element:<Child1/>
+            },
+            {
+                path:'child2',
+                element:<Child2/>
+            },
+            {
+                path:'child3',
+                element:<Child3/>
+            }
+        ]
+    },
+];
+
+export default routes;
