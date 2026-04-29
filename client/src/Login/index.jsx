@@ -13,8 +13,12 @@ import {
   Container,
   Col
 } from "react-bootstrap";
+import { useLocation } from "react-router";
 
 const Login = () => {
+
+  const {state} = useLocation();
+  console.log(state);
   return (
     <Container fluid>
       <Row>

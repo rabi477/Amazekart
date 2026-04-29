@@ -12,7 +12,7 @@ function App() {
       <section>
         <Link to="/login">Login</Link>
         <Link to="/signup">Signup</Link>
-        <Link to="/routing">Routing</Link>
+        <Link to="/routing/m123?keyword=iphone&category=electronics">Routing</Link>
         <Link to="/parent">Parent</Link>
       </section>
       <Outlet/>

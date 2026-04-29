@@ -3,6 +3,9 @@ import Signup from "./Signup";
 import Routing from "./Routing";
 import Products from "./Products";
 import Parent,{Child1,Child2,Child3} from "./Parent";
+import ProtectedRoute from "./ProtectedRoute";
+import UserCart from "./UserCart";
+import Orders from "./Orders";
 
 const routes =[
     {
@@ -18,7 +21,7 @@ const routes =[
         element:<Signup/>
     },
     {
-        path:'/routing',
+        path:'/routing/:productId',
         element:<Routing/>
     },
     {
@@ -39,6 +42,18 @@ const routes =[
             }
         ]
     },
+    {
+        path:'user',
+        element:<ProtectedRoute/>,
+        children:[
+            {
+                path:'cart', element:<UserCart/>
+            },
+            {
+                path:'order', element:<Orders/>
+            }
+        ]
+    }
 ];
 
 export default routes;
