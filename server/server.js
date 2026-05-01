@@ -3,17 +3,9 @@ const router = require("./routes/router");
 
 const app = express();
 
-app.use("/router",router);
+app.use(express.json());
 
-app.post("/signup",(req,res)=>{
-    const formData = req.body;
-    console.log(formData);
-    res.send(
-        {
-            status:true, 
-            message : `${formData?.name} successfully registered`}
-    );
-});
+app.use("/router",router);
 
 const PORT = 4000;
 
