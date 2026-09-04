@@ -31,3 +31,5 @@ db.sales.find();
 
 db.sales.find({price : {$gt:5}},{_id:0})
 
+db.user.find({username:"test"});
+
